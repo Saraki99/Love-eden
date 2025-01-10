@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f3f4f7, #dcdde1);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      text-align: center;
+      background: linear-gradient(135deg, #e8f0fe, #ffffff);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    header img {
+      display: block;
+      margin: 0 auto;
+      width: 150px;
+      height: auto;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    header p {
+      font-size: 14px;
+      color: #555;
+      margin: 5px 0;
+    }
+
+    .tagline {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group .checkbox-group {
+      display: flex;
+      gap: 15px;
+    }
+
+    .form-group .checkbox-group label {
+      font-weight: normal;
+    }
+
+    .upload-photo {
+      position: absolute;
+      top: 90px; /* Adjusted for 3cm down */
+      right: 10px;
+      text-align: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 4px;
+      width: 120px;
+      height: 140px;
+      background-color: #f9f9f9;
+    }
+
+    .upload-photo label {
+      font-size: 12px;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .upload-photo input {
+      font-size: 12px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      border: none;
+      background: #5cb85c;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #4cae4c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <!-- Centered Logo -->
+    <img src="https://i.postimg.cc/Nf0gbc3V/IMG-20250109-WA0266-1-1.jpg" alt="Company Logo">
+    <h1>LOVE EDEN</h1>
+    <p><strong>Motto:</strong> Love Consultation & Guidance</p>
+    <p><strong>Address:</strong> Ado Gambo Street,Jaen Tsakiya</p>
+    <p><strong>Phone:</strong> 08024231697,09070596621</p>
+    <p><strong>Email:</strong> Loveedenng@gmail.com</p>
+    <!-- Photo Upload -->
+    <div class="upload-photo">
+      <label for="photo">Upload Photo (Max: 5MB)</label>
+      <input type="file" id="photo" name="photo" accept="image/*">
+    </div>
+  </header>
+
+  <div class="tagline">(Join us to build self-reliable network consultation & guidance)</div>
+
+  <form action="https://formsubmit.co/Loveedenng@gmail.com" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://chat.whatsapp.com/EjMl7VAtmXpKPFHAJe5aA9">
+
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <!-- Age -->
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+    </div>
+
+    <!-- Phone -->
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+
+    <!-- Address -->
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+    </div>
+
+    <!-- Education -->
+    <div class="form-group">
+      <label>Education Type:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="education" value="Islam"> Islam</label>
+        <label><input type="checkbox" name="education" value="Western"> Western</label>
+        <label><input type="checkbox" name="education" value="Both"> Both</label>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="form-group">
+        <label>EXPERIENCE:</label>
+        
+      <label>Have you ever joined any group or association?</label>
+      <label><input type="radio" name="experience" value="Yes"> Yes</label>
+      <label><input type="radio" name="experience" value="No"> No</label>
+    </div>
+    <div class="form-group">
+      <label>If yes, name it:</label>
+      <input type="text" name="group_name">
+    </div>
+
+    <!-- Skills -->
+    <div class="form-group">
+      <label>What is your skill?</label>
+      <input type="text" name="skill" required>
+    </div>
+    <div class="form-group">
+      <label>In which way can you assist/contribute to this journey?</label>
+      <textarea name="contribution" rows="3" required></textarea>
+    </div>
+
+    <!-- Rules and Regulations -->
+    <div class="form-group">
+      <label><strong>Rules and Regulations:</strong></label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="rules" value="Rule 1"> Each partner must contribute in any research task given at the time.</label>
+        <label><input type="checkbox" name="rules" value="Rule 2"> No partner may act on behalf of the company without proper authorization.</label>
+        <label><input type="checkbox" name="rules" value="Rule 3"> Keep all partnership information confidential.</label>
+        <label><input type="checkbox" name="rules" value="Rule 4"> Treat everyone with respect.</label>
+        <label><input type="checkbox" name="rules" value="Rule 5"> Consult clients via group for better solutions.</label>
+      </div>
+    </div>
+
+    <!-- Declaration -->
+    <div class="form-group">
+      <label><strong>Declaration:</strong></label>
+      <textarea readonly>I hereby agree to abide by all rules and regulations.</textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
